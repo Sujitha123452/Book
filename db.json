@@ -1,0 +1,34 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "name": "Python",
+      "author": "Author 1",
+      "description": "This is a description of python."
+    },
+    {
+      "id": 2,
+      "name": "Java",
+      "author": "Author 2",
+      "description": "This is a description of Java."
+    },
+    {
+      "name": "Angular",
+      "author": "Author 3",
+      "description": "Description of angular",
+      "id": 3
+    },
+    {
+      "name": "C sharp",
+      "author": "Author 4",
+      "description": "c charp book",
+      "id": 4
+    },
+    {
+      "name": "c++",
+      "author": "james",
+      "description": "c++ book",
+      "id": 5
+    }
+  ]
+}

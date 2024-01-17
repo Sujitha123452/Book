@@ -1,0 +1,35 @@
+<div style="text-align:center">
+  <h1 style="text-align: left;">{{title}}</h1>
+  <div class="navbar">
+    <a href="#">Home</a><h5>|</h5>
+    <a (click)="hidebook=!hidebook">Add Book</a><h5>|</h5>
+    <a (click)="managebook=!managebook">Manage Book</a>
+</div>
+  <table>
+     <!-- <tr>
+       <th>Id</th>
+       <th>Name</th>
+       <th>Author</th>
+        <th>Action</th>
+     </tr> -->
+     <tr *ngFor="let book of books">
+       <td>Id:{{book.id}}</td><td>,</td><td>Name:</td>
+       <td>{{book.name}}</td>
+       <!-- <td>{{book.author}}</td> -->
+       <td *ngIf="!hide">{{book.description}}</td>
+       <a (click)="hide = !hide" style="text-decoration: underline;color: blue;">{{ hide ? '|view details' : 'Hide' }}</a>
+        <td *ngIf="!managebook">
+         <button (click)="deleteBook(book.id)">Delete</button>
+       </td>
+     </tr>
+  </table>
+  <form *ngIf="!hidebook" (submit)="addBook(bookName.value, bookAuthor.value, bookDescription.value) ">
+     <label>Book Name:</label>
+     <input type="text" #bookName>
+     <label>Book Author:</label>
+     <input type="text" #bookAuthor>
+     <label>Book Description:</label>
+     <input type="text" #bookDescription>
+     <button type="submit">Add Book</button>
+  </form>
+ </div>
